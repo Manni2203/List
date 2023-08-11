@@ -1,79 +1,36 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Steps to run this program:
+Make sure you are able to run react native template project please follow https://reactnative.dev/docs/environment-setup
 
-# Getting Started
+1.To install node packages run this in terminal of root folder of the project => npm install
+2.to run android build
+2a. in root folder of project run this in terminal : npx react-native run-android
+3.to run ios build
+3a. form roo directory change directory to ios and run this in terminal => pod install
+3b. change back to root directory and run =>npx react-native run-ios
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Task completed:
 
-## Step 1: Start the Metro Server
+Task 1: Simple React Native App
+a.Create a basic React Native app that meets the following requirements:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+b.The app should have a login screen with two input fields (username and password) and a "Login" button.
+c.Implement a basic authentication mechanism where the app accepts a hardcoded username and password. On successful login, d.d.display an alert saying "Login successful." Otherwise, show an alert saying "Login failed."
+e.Styling is not the main focus of this task, but feel free to add some basic styling to make the login screen visually appealing.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Task 2: Fetch and Display Data
+In this task, you'll extend the previous React Native app to fetch and display data from an API.
 
-```bash
-# using npm
-npm start
+a.Create a new screen that displays a list of posts obtained from this JSONPlaceholder API endpoint: https://jsonplaceholder.typicode.com/posts
+b.Each list item should show the post title and body.
+c.When a user taps on a post, navigate to a new screen that displays the full details of that post.
+d.Add a "Refresh" button on the list screen that fetches and updates the list of posts from the API.
 
-# OR using Yarn
-yarn start
-```
+Bonus (Optional):
+If you have time and want to show off your skills, you can implement the following additional features:
 
-## Step 2: Start your Application
+1.Add pull-to-refresh functionality on the list screen.
+2.Add pagination to the list of posts if the API supports it.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Few additional functionality include:
+a. Implemented reducer to store userData
+b. Login will persist till user logout(used async storage)
